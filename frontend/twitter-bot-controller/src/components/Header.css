@@ -1,0 +1,5 @@
+.Header__wrapper {
+  display: flex;
+  padding: 0 20px;
+  background-color: green;
+}

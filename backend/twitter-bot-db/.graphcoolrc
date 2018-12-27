@@ -1,0 +1,3 @@
+targets:
+  twitter-bot-db: shared-eu-west-1/cjq73i6ke8iyp01857yl9nk71
+  default: twitter-bot-db
