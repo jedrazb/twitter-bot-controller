@@ -21,3 +21,11 @@ export const GET_ACCEPTED_POSTS = gql`
     }
   }
 `;
+
+export const ACCEPT_POST_FOR_PUBLISHING = gql`
+  mutation AcceptPostForPublishing($id: ID!) {
+    updatePost(id: $id, acceptedForPosting: true) {
+      id
+    }
+  }
+`;

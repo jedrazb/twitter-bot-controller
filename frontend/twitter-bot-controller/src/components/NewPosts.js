@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Query } from "react-apollo";
 
-import Post from "./Post";
+import Post from "./post/Post";
 
 import { GET_PENDING_POSTS } from "../query";
 

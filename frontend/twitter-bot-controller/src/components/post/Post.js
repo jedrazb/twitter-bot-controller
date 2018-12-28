@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+import AcceptButton from "./AcceptButton";
+
 type Props = {
   content: String,
   id: String,
@@ -13,6 +15,7 @@ const Post = (props: Props) => {
   return (
     <div>
       <p>{content}</p>
+      <AcceptButton id={id} />
     </div>
   );
 };

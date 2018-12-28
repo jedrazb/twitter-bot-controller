@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Query } from "react-apollo";
 
-import Post from "./Post";
+import Post from "./post/Post";
 
 import { GET_ACCEPTED_POSTS } from "../query";
 
