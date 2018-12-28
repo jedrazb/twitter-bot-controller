@@ -3,7 +3,7 @@
 import gql from "graphql-tag";
 
 export const GET_PENDING_POSTS = gql`
-  {
+  query GetPendingPosts {
     allPosts(filter: { acceptedForPosting: false }, orderBy: createdAt_DESC) {
       id
       content
@@ -13,7 +13,7 @@ export const GET_PENDING_POSTS = gql`
 `;
 
 export const GET_ACCEPTED_POSTS = gql`
-  {
+  query GetAcceptedPosts {
     allPosts(filter: { acceptedForPosting: true }, orderBy: createdAt_DESC) {
       id
       content
@@ -23,7 +23,7 @@ export const GET_ACCEPTED_POSTS = gql`
 `;
 
 export const ACCEPT_POST_FOR_PUBLISHING = gql`
-  mutation AcceptPostForPublishing($id: ID!) {
+  mutation acceptPostForPublishing($id: ID!) {
     updatePost(id: $id, acceptedForPosting: true) {
       id
     }
