@@ -1,0 +1,6 @@
+{
+  "root": "frontend/twitter-bot-controller/build/",
+  "routes": {
+    "/**": "index.html"
+  }
+}
