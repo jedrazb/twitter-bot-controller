@@ -52,4 +52,4 @@ class Server:
         reactor.run()
 
 
-Server().post_routine()
+Server().start()
