@@ -26,7 +26,6 @@ class Server:
     def create_routine(self):
         content = self.generator.generate()
         variables = {'content': content}
-        print(content)
         self.client.execute(create_post, variables)
 
     def post_routine(self):
@@ -38,16 +37,16 @@ class Server:
 
         post_to_poblish = posts[0]
         content = post_to_poblish['content']
-        print(content)
         self.tweet_bot.post(content)
 
     def start(self):
-        generate_timeout = 180.0
+        generate_timeout = 30 * 60
         generate_routine = task.LoopingCall(self.create_routine)
         generate_routine.start(generate_timeout)
 
-        # post_timeout = 500.0
-        # post_routine = task.LoopingCall(self.post_routine)
+        post_timeout = 6 * 60 * 60
+        post_routine = task.LoopingCall(self.post_routine)
+        post_routine.start(post_timeout)
 
         reactor.run()
 
