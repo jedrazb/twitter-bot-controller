@@ -29,3 +29,11 @@ export const ACCEPT_POST_FOR_PUBLISHING = gql`
     }
   }
 `;
+
+export const DELETE_POST = gql`
+  mutation deletePost($id: ID!) {
+    deletePost(id: $id) {
+      id
+    }
+  }
+`;

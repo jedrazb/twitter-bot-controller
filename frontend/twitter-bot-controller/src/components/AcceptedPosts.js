@@ -16,7 +16,9 @@ class AcceptedPosts extends React.Component {
           if (loading) return "Loading...";
           if (error) return `Error! ${error.message}`;
           console.log(data);
-          return data.allPosts.map(post => <Post {...post} />);
+          return data.allPosts.map(post => (
+            <Post isAccepted key={post.id} {...post} />
+          ));
         }}
       </Query>
     );
