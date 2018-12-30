@@ -1,16 +1,17 @@
 import os
 from textgenrnn import textgenrnn
 
-from text_prettier import prettify
+from text_utils import prettify
+from text_utils import add_hashtags
 
 
 class Generator:
 
     def __init__(self):
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        self.textgen = textgenrnn(weights_path=dir_path+'/bible_weights.hdf5',
-                                  vocab_path=dir_path+'/bible_vocab.json',
-                                  config_path=dir_path+'/bible_config.json')
+        self.textgen = textgenrnn(weights_path=dir_path+'/trumpbot_weights.hdf5',
+                                  vocab_path=dir_path+'/trumpbot_vocab.json',
+                                  config_path=dir_path+'/trumpbot_config.json')
 
     def generate(self):
         temperature = [0.5]
@@ -19,4 +20,5 @@ class Generator:
             temperature=temperature,
             return_as_list=True)[0]
 
-        return prettify(text_sample)
+        nice_text = prettify(text_sample)
+        return nice_text
