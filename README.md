@@ -22,4 +22,6 @@ The model which was used for this project is [textgenrnn](https://github.com/min
 Once you train the model in the notebook simply download the `{model_name}_weights.hdf5`, `{model_name}_vocab.json` and `{model_name}_config.json` and update the file paths in the [generate.py](https://github.com/jedrazb/twitter-bot-controller/blob/master/backend/twitter-bot-server/src/generate.py)
 
 ## GraphQL DB
+For the GraphQL framework I chose [GraphCool](https://www.graph.cool/). It offers production-ready hosted solution, which means you don't need to worry about setting DB up as it works out of the box, and what is most important you can have it hosted for free (with 250 MB limit).
 
+The only thing to do is to define the [model schemas](https://github.com/jedrazb/twitter-bot-controller/blob/master/backend/twitter-bot-db/types.graphql) either using [GraphCool CLI](https://www.graph.cool/docs/reference/graphcool-cli/overview-zboghez5go/) or using web-interface. 
