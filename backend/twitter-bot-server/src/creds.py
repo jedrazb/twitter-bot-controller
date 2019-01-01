@@ -1,8 +1,10 @@
+import os
+
 CREDS = {
-    'API_KEY': 'Xs48Nljo2CgNd09OhTHLfkVNz',
-    'API_SECRET': 'x8Yd23MlBDBFKGci4EnMNx8BplBkPVpd4206hWAm7BQOEw5gaa',
-    'ACCESS_TOKEN': '1078993339561717760-itAj6SzsFQOjOs228fAECZdUEJyvot',
-    'ACCESS_TOKEN_SECRET': 'LPLXquEm7aY3essR5ybeUpCeGLSxBiV8OnCQiGT0tEc2o'
+    'API_KEY': os.environ['API_KEY'],
+    'API_SECRET': os.environ['API_SECRET'],
+    'ACCESS_TOKEN': os.environ['ACCESS_TOKEN'],
+    'ACCESS_TOKEN_SECRET': os.environ['ACCESS_TOKEN_SECRET']
 }
 
-DB_ENDPOINT = 'https://api.graph.cool/simple/v1/cjq73i6ke8iyp01857yl9nk71'
+DB_ENDPOINT = os.environ['DB_ENDPOINT']
