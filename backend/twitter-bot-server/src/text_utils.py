@@ -25,6 +25,7 @@ def prettify(text):
     text = text.replace('trump', 'Trump')
     text = text.replace('mr', 'Mr')
     text = text.replace(' @: ', '')
+    text = text.replace(' & amp;', '')
 
     add_hashtags(text, [])
 
