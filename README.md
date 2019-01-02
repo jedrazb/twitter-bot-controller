@@ -14,6 +14,7 @@ Check the result on Twitter: [@moretrumpforyou](https://twitter.com/moretrumpfor
 You can deploy this app completely for free (on [Heroku](https://heroku.com) and [GraphCool](https://www.graph.cool/)) and have your own trained bot.
 
 ## Archtecture
+<img src="https://i.imgur.com/sv5wELw.jpg" width="600" />
 
 ## LSTM Model
 
