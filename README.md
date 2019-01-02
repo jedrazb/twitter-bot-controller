@@ -50,6 +50,7 @@ And set following config (env) vars:
 Add those buildpacks:
 - https://github.com/timanovsky/subdir-heroku-buildpack
 - heroku/python
+
 And add those config vars:
 - `PROJECT_PATH`: `backend/twitter-bot-server`
 - `ACCESS_TOKEN`, `ACCESS_TOKEN_SECRET`, `API_KEY` and `API_SECRET` which are Twitter API credentials
