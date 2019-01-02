@@ -26,15 +26,15 @@ For the GraphQL framework I chose [GraphCool](https://www.graph.cool/). It offer
 
 The only thing to do is to define the [model schemas](https://github.com/jedrazb/twitter-bot-controller/blob/master/backend/twitter-bot-db/types.graphql) either using [GraphCool CLI](https://www.graph.cool/docs/reference/graphcool-cli/overview-zboghez5go/) or using web-interface. 
 
-# React app
+## React app
 
 Simple React frontend created using [create-react-app](https://github.com/facebook/create-react-app)
 
-# Twitter bot
+## Twitter bot
 
 Simple python script which periodically posts accepted content on twitter. I used [Tweepy](http://www.tweepy.org/) as Twitter API wrapper. Everything can be found in the official docs.
 
-# Deployment (if you want to have your own bot)
+## Deployment (if you want to have your own bot)
 
 You can easily deploy the twitter bot script and React app on Heroku.
 
