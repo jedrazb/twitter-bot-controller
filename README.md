@@ -28,6 +28,29 @@ The only thing to do is to define the [model schemas](https://github.com/jedrazb
 
 # React app
 
+Simple React frontend created using [create-react-app](https://github.com/facebook/create-react-app)
+
 # Twitter bot
 
+Simple python script which periodically posts accepted content on twitter. I used [Tweepy](http://www.tweepy.org/) as Twitter API wrapper. Everything can be found in the official docs.
+
 # Deployment (if you want to have your own bot)
+
+You can easily deploy the twitter bot script and React app on Heroku.
+
+### React app
+Create new app on Heroku. Select a free dyno and add the following buildpacks to the app:
+- https://github.com/timanovsky/subdir-heroku-buildpack
+- https://github.com/mars/create-react-app-buildpack.git
+
+And set following config (env) vars:
+- `PROJECT_PATH`: `frontend/twitter-bot-controller`
+
+### Twitter bot
+Add those buildpacks:
+- https://github.com/timanovsky/subdir-heroku-buildpack
+- heroku/python
+And add those config vars:
+- `PROJECT_PATH`: `backend/twitter-bot-server`
+- `ACCESS_TOKEN`, `ACCESS_TOKEN_SECRET`, `API_KEY` and `API_SECRET` which are Twitter API credentials
+- `DB_ENDPOINT` your GraphQL endpoint
