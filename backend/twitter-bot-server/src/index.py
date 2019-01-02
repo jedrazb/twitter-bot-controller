@@ -45,11 +45,11 @@ class Server:
         print(self.tweet_bot.post(content))
 
     def start(self):
-        generate_timeout = 5 * 60
+        generate_timeout = 30 * 60
         generate_routine = task.LoopingCall(self.create_routine)
         generate_routine.start(generate_timeout)
 
-        post_timeout = 30 * 60
+        post_timeout = 6 * 60 * 60
         post_routine = task.LoopingCall(self.post_routine)
         post_routine.start(post_timeout)
 
