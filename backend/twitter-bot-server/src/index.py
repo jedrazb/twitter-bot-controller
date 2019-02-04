@@ -4,6 +4,7 @@ from twisted.internet import task, reactor
 
 from generate import Generator
 from query import create_post
+from query import create_accepted_post
 from query import get_accepted_post
 from query import delete_post
 from tweet_bot import TweetBot
@@ -29,7 +30,7 @@ class Server:
 
         variables = {'content': content}
 
-        self.client.execute(create_post, variables)
+        self.client.execute(create_accepted_post, variables)
 
     def post_routine(self):
         response = self.client.execute(get_accepted_post)

@@ -9,6 +9,15 @@ mutation CreatePost($content: String!) {
 }
 """)
 
+create_accepted_post = gql("""
+mutation CreatePost($content: String!) {
+  createPost(content: $content, acceptedForPosting: true) {
+    id
+    createdAt
+  }
+}
+""")
+
 get_accepted_post = gql("""
 query GetAcceptedPost {
   allPosts(filter: {
